@@ -1,0 +1,113 @@
+html {
+  height: 100%;
+  width: 100%;
+  font-family: "Verdana";
+  font-weight: 100;
+}
+
+body{
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+}
+
+.title{
+  background-color: #68638B;
+  text-align: center;
+  height: 10%; /* height of grey thing */
+  width: 100%; /* width */
+  top: 0;
+  font-family: "American Typewriter";
+  font-weight: 80;
+  color: white;
+}
+
+.tetris {
+  padding-top:45px;
+}
+
+.settingstext {
+  padding-left: 10px;
+  color: white;
+}
+
+.textField {
+  color: white;
+}
+
+
+.compsDiv{
+  background-color: #8E87B8;
+  height: 90%;
+  width: 15%;
+  overflow: scroll;
+  float: left;
+  position: fixed;
+  bottom: 0;
+}
+
+.settingsDiv{
+  background-color: #8E87B8;
+  height: 90%;
+  width: 15%;
+  overflow: scroll;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+.settingsDiv2{
+  background-color: palegoldenrod;
+  height: 10%;
+  width: 15%;
+  overflow: scroll;
+  float: right;
+}
+
+.component{
+  color: white;
+  background-color: #B0B0B0;
+  height: 118px;
+  width: 130px;
+  margin: auto;
+  border-radius: 20px;
+  text-align: center;
+}
+
+
+.workspace{
+  background-color: #D9D9D9;
+  height: 100%;
+  margin: auto;
+  width: 70%;
+  overflow: hidden;
+}
+
+
+
+.textSettings{
+  display: none;
+}
+
+.numlistSettings{
+  display: none;
+}
+
+.workplaceTitle{
+  display: inline-block;
+  text-decoration: underline;
+}
+
+.generateBtn{
+  display: inline-block;
+  background-color:#d9d9d9;
+  border-radius: 20px;
+  border: 0px;
+  height: 30px;
+  color: #68638B;
+}
+
+.btnSettings{
+  display: none;
+}

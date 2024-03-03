@@ -1,0 +1,143 @@
+<!-- wmxgd-rncrl-qoxgw-eanen -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <div class="title">
+    <div class="titleSub">
+      <h1 class="workplaceTitle">Workplace</h1>
+      <button class="generateBtn" onclick="displayCode()">Generate HTML code</button>
+    </div>
+  </div>
+
+  <div class="compsDiv">
+    <h3 class="settingstext" style="text-align: center">Components:</h3>
+    
+    <div class="component" id="textAdd" onclick="addText()">
+      <h3 class="tetris">Text</h3>
+    </div>
+    <div class="component" id="imgAdd" onclick="addImg()">
+      <h3 class="tetris">Image</h3>
+    </div>
+    <div class="component" id="urlAdd" onclick="addUrl()">
+      <h3 class="tetris">URL</h3>
+    </div>
+    <div class="component" id="listAdd" onclick="addNumList()">
+      <h3 class="tetris">List</h3>
+    </div>
+    <div class="component" id="btnAdd" onclick="addBtn()">
+      <h3 class="tetris">Button</h3>
+    </div>
+  </div>
+
+  <div class="settingsDiv">
+    <h3 class="settingstext" style="text-align: center">Settings:</h3>
+
+    <div class="textSettings" id="textSettings">
+      <h3 class="settingstext">Text Settings:</h3>
+
+      <label for="textVal" class="settingstext">Value:</label>
+      <input id="textVal" name="textVal" type="text" onchange="changeText()">
+
+      <br /> <br />
+
+      <label for="textCol" class="settingstext">Color:</label>
+      <input id="textCol" name="textCol" type="color" onchange="changeTextColor()">
+
+      <br /> <br />
+
+      <label for="textSize" class="settingstext">Size:</label>
+      <input id="textSize" name="textSize" type="text" onchange="changeFontsize()">
+
+      <br /> <br />
+      <label for="changeTxtId" class="settingstext">ID of this element*</label>
+      <input id="changeTxtId" name="changeTxtId" type="text" onchange="changeTxtId()">
+      <br />
+      <p class="settingstext">*Used for making button functions with the button element.</p>
+    </div>
+
+    <div id="linker" style="display: none;">
+      <h3 class="settingstext">URL Settings:</h3>
+      <label for="link" id="urlLabel" class="settingstext"> URL:</label>
+      <input type="text" id="link" name="link" minlength="3" maxlength="500" required onchange="changelink()">
+      <br />
+      <label for="changeLinkId" class="settingstext" class="settingstext">ID of this element*</label>
+      <input id="changeLinkId" name="changeLinkId" type="text" onchange="changeLinkId()">
+      <p class="settingstext" class="settingstext">*Used for making button functions with the button element.</p>
+    </div>
+
+    <div id="textField" style="display: none">
+      <h3 class="settingstext">Image Settings:</h3>
+
+      <label for="imgurl" id="urlLabel" class="settingstext"> Image URL:</label>
+      <input type="text" id="url" name="url" minlength="3" maxlength="500" required onchange="stuff()">
+
+      <br /> <br />
+
+      <label for="width" class="settingstext"> Width:</label>
+      <input type="number" id="width" name="width" minlength="3" maxlength="500" required onchange="stuff()">
+
+      <br /><br />
+
+      <label for="height" class="settingstext"> Height:</label>
+      <input type="number" id="height" name="height" minlength="3" maxlength="500" required onchange="stuff()">
+
+      <br /><br />
+      <label for="changeImgId" class="settingstext">ID of this element*</label>
+      <input id="changeImgId" name="changeImgId" type="text" onchange="changeImgId()">
+      <p class="settingstext">*Used for making button functions with the button element.</p>
+    </div>
+
+    <div class="numlistSettings" id="numlistSettings">
+      <h3 class="settingstext">List Settings:</h3>
+      <label for="listLis" class="settingstext">List Elements:</label>
+      <div name="listLis" id="listLis">
+        <input type="text" id="listElm1" name="listElm1" onchange="changeNumlist(1)">
+      </div>
+      <br />
+      <button onclick="addNumlistComp()">Add list component</button> <br /> <br />
+      <label for="listType" class="settingstext">List numbering format</label>
+      <select id="listType" name="listType" onchange="setListType()">
+        <option value="1">Numbered</option>
+        <option value="A">Uppercase Letters</option>
+        <option value="a">Lowercase Letters</option>
+        <option value="I">Uppercase Roman Numerals</option>
+        <option value="i">Lowercase Roman Numerals</option>
+      </select>
+      <br /> <br />
+      <label for="numlistColor" class="settingstext">Color</label>
+      <input type="color" id="numlistColor" name="numlistColor" onchange="numlistColor()">
+      <br /> <br />
+      <label for="changeListId" class="settingstext">ID of this element*</label>
+      <input id="changeListId" name="changeListId" type="text" onchange="changeListId()">
+      <p class="settingstext">*Used for making button functions with the button element.</p>
+    </div>
+
+    <div class="btnSettings" id="btnSettings">
+      <h3 class="settingstext">Button Settings:</h3>
+      <label for="btnLabel" class="settingstext">Label</label>
+      <input type="text" name="btnLabel" id="btnLabel" onchange="btnLabel()" placeholder="Button">
+      <label for="btnScrpt" class="settingstext">Here, you can add a custom onclick javascript function for your
+        button.</label>
+      <textarea id="btnScrpt" name="btnScrpt" onchange="btnScrpt()"></textarea>
+      <p class="settingstext">function(){} is already added. :)</p>
+    </div>
+  </div>
+
+  <div id="workspace" class="workspace">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
