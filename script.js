@@ -251,6 +251,18 @@ function btnLabel(){
   element.innerHTML = document.getElementById("btnLabel").value;
 }
 
+function btnHeight(){
+  element.style.height = document.getElementById("btnHeight").value + "px";
+}
+
+function btnColor(){
+  element.style.backgroundColor = document.getElementById("btnColor").value;
+}
+
+function btnWidth(){
+  element.style.width = document.getElementById("btnWidth").value + "px";
+}
+
 function btnScrpt(){
   element.onclick = function(){eval(document.getElementById("btnScrpt").value)};
 }
